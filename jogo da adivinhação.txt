@@ -1,22 +1,22 @@
  Scanner scanner = new Scanner(System.in);
         JOptionPane.showMessageDialog(null, "Carregando jogo...");
-        JOptionPane.showMessageDialog(null, "Olá! Você está jogando o JOGO DA ADVINHAÇÃO!!!");
+        JOptionPane.showMessageDialog(null, "Oi! Você está jogando o meu JOGO DA ADVINHAÇÃO!!");
         String num = JOptionPane.showInputDialog(null, "Tente acertar o número de 1 a 10");
         int NDigitado = Integer.parseInt(num);
         int NCerto = aleatorio();        
         for(int i= 1; i < 10; i++){
         if( NCerto == NDigitado){
-            JOptionPane.showMessageDialog(null, "~NÚMERO CERTO~");
-            JOptionPane.showMessageDialog(null, "PARABÉNS!!! Você acertou, foi de " + i + "ª!");
+            JOptionPane.showMessageDialog(null, "^^NÚMERO CORRETO^^");
+            JOptionPane.showMessageDialog(null, "ISSO AÍ!! Você acertou, foi de " + i + "ª!");
             break;
         }else{
-            JOptionPane.showMessageDialog(null, "~NÚMERO ERRADO~");
+            JOptionPane.showMessageDialog(null, "^^NÚMERO INCORRETO^^");
             if(NCerto > NDigitado){
-                JOptionPane.showMessageDialog(null, "Bah... Por que não tenta de novo?");
+                JOptionPane.showMessageDialog(null, "Vish... Que tal tentar de novo?");
                  String Maior = JOptionPane.showInputDialog(null, "Dica: O número certo é maior que o digitado" );
                  NDigitado = Integer.parseInt(Maior);
             }else if (NCerto < NDigitado){
-                JOptionPane.showMessageDialog(null, "Bah... Por que não tenta de novo?");
+                JOptionPane.showMessageDialog(null, "Vish... Que tal tentar de novo?");
                 String Menor = JOptionPane.showInputDialog(null, "Dica: O número certo é menor que o digitado");
                 NDigitado = Integer.parseInt(Menor);
             }
